@@ -1,7 +1,90 @@
-<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Noticias</title><link rel="stylesheet" href="css/estilos.css"></head><body><header><h1>Noticias</h1><button class="menu-toggle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+<header>
+    <h1>Noticias</h1>
+
+    <!-- Ícono menú hamburguesa -->
+    <svg id="btn-menu" xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24">
+        <path d="M3 6h18M3 12h18M3 18h18" stroke="white" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+</header>
+
+<!-- NAV -->
 <nav>
-  <a href="index.html">Inicio</a>
-  <a href="social_media.html">Social Media</a>
-  <a href="social_comentario.html">Comentarios</a>
-  <a href="social_noticias.html">Noticias</a>
-</nav></header><div class="container"><div class="card"><h3>Noticia 1</h3><p>La nueva actualización de la red social incluye modo oscuro.</p><span class="like-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg> <span class="like-count">0</span></span></div><div class="card"><h3>Noticia 2</h3><p>Se implementarán reacciones personalizadas en los próximos días.</p><span class="like-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg> <span class="like-count">0</span></span></div><div class="card"><h3>Noticia 3</h3><p>¡Más opciones de privacidad para todos los usuarios!</p><span class="like-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg> <span class="like-count">0</span></span></div></div><script src="js/script.js"></script></body></html>
+    <a href="index.html">Inicio</a>
+    <a href="social_media.html">Social Media</a>
+    <a href="social_comentario.html">Comentarios</a>
+    <a href="social_noticias.html">Noticias</a>
+</nav>
+
+<div class="contenedor">
+    <h2>Secciones de noticias</h2>
+
+    <!-- NOTICIA 1 -->
+    <div class="tarjeta">
+        <h3>Noticia 1</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse commodo ligula a magna porta.</p>
+
+        <button class="btn-like" data-id="likeN1">
+            <!-- Ícono SVG Like -->
+            <svg class="icon-like" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 
+                         2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09 
+                         C13.09 3.81 14.76 3 16.5 3 
+                         19.58 3 22 5.42 22 8.5c0 3.78-3.4 
+                         6.86-8.55 11.54L12 21.35z"
+                      fill="none" stroke="red" stroke-width="2"/>
+            </svg>
+            <span id="likeN1">0</span> Likes
+        </button>
+    </div>
+
+    <!-- NOTICIA 2 -->
+    <div class="tarjeta">
+        <h3>Noticia 2</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id molestie tortor.</p>
+
+        <button class="btn-like" data-id="likeN2">
+            <svg class="icon-like" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 
+                         2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09 
+                         C13.09 3.81 14.76 3 16.5 3 
+                         19.58 3 22 5.42 22 8.5c0 3.78-3.4 
+                         6.86-8.55 11.54L12 21.35z"
+                      fill="none" stroke="red" stroke-width="2"/>
+            </svg>
+            <span id="likeN2">0</span> Likes
+        </button>
+    </div>
+
+    <!-- NOTICIA 3 -->
+    <div class="tarjeta">
+        <h3>Noticia 3</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel hendrerit dui.</p>
+
+        <button class="btn-like" data-id="likeN3">
+            <svg class="icon-like" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 
+                         2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09 
+                         C13.09 3.81 14.76 3 16.5 3 
+                         19.58 3 22 5.42 22 8.5c0 3.78-3.4 
+                         6.86-8.55 11.54L12 21.35z"
+                      fill="none" stroke="red" stroke-width="2"/>
+            </svg>
+            <span id="likeN3">0</span> Likes
+        </button>
+    </div>
+
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

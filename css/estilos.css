@@ -1,15 +1,114 @@
+ /* ------- CONFIGURACIÓN GENERAL ------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
 
-body {font-family: 'Segoe UI', Arial, sans-serif; margin:0; padding:0; background:#f9f9f9; color:#333;}
-header {background:#4a148c; color:#fff; padding:1rem; text-align:center; position:relative;}
-nav {display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;}
-nav a {background:#6a1b9a; color:#fff; padding:.7rem 1rem; text-decoration:none; border-radius:6px;}
-nav a:hover {background:#8e24aa;}
-.container {max-width:960px; margin:auto; padding:1rem;}
-.card {background:#fff; border-radius:8px; padding:1rem; margin-bottom:1rem; box-shadow:0 2px 6px rgba(0,0,0,.1);}
-.like-btn {cursor:pointer; display:inline-flex; align-items:center; gap:.4rem; font-size:1rem; color:#555;}
-.like-btn svg {width:20px; height:20px; fill:#555;}
-.like-btn.liked svg {fill:red;}
-.like-count {font-weight:bold;}
-.menu-toggle {display:none; position:absolute; top:1rem; right:1rem; background:none; border:none; cursor:pointer;}
-.menu-toggle svg {width:28px; height:28px; fill:#fff;}
-@media(max-width:600px){nav {display:none; flex-direction:column; align-items:center;} nav.show {display:flex;} .menu-toggle {display:block;}}
+body {
+    background: #f3f4f6;
+    color: #1f2937;
+    padding-bottom: 50px;
+}
+
+/* ------- ENCABEZADO ------- */
+header {
+    background: #4f46e5;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 20px;
+}
+
+/* ------- MENÚ DESPLEGABLE ------- */
+#btn-menu {
+    width: 30px;
+    cursor: pointer;
+}
+
+nav {
+    display: none;
+    background: #4338ca;
+    padding: 10px 0;
+}
+
+nav a {
+    display: block;
+    padding: 12px 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav a:hover {
+    background: #3730a3;
+}
+
+/* Mostrar menú cuando está activo */
+nav.show {
+    display: block;
+}
+
+/* ------- CONTENEDORES ------- */
+.contenedor {
+    width: 90%;
+    max-width: 850px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+/* Botones principales */
+.btn-principal {
+    display: block;
+    text-align: center;
+    background: #4f46e5;
+    color: white;
+    padding: 15px;
+    margin: 15px 0;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 18px;
+}
+
+.btn-principal:hover {
+    background: #4338ca;
+}
+
+/* ------- BOTONES DE LIKE ------- */
+.like-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 10px 0;
+    cursor: pointer;
+    user-select: none;
+}
+
+.like-btn svg {
+    width: 28px;
+    transition: 0.2s;
+    fill: #6b7280;
+}
+
+.like-btn.liked svg {
+    fill: #ef4444;
+    transform: scale(1.1);
+}
+
+.like-count {
+    font-size: 18px;
+    font-weight: 600;
+}

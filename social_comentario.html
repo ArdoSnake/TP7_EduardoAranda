@@ -1,7 +1,68 @@
-<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Comentarios</title><link rel="stylesheet" href="css/estilos.css"></head><body><header><h1>Comentarios</h1><button class="menu-toggle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comentarios</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+<header>
+    <h1>Comentarios</h1>
+    <svg id="btn-menu" xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24">
+        <path d="M3 6h18M3 12h18M3 18h18" stroke="white" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+</header>
+
 <nav>
-  <a href="index.html">Inicio</a>
-  <a href="social_media.html">Social Media</a>
-  <a href="social_comentario.html">Comentarios</a>
-  <a href="social_noticias.html">Noticias</a>
-</nav></header><div class="container"><div class="card"><h3>Comentario 1</h3><p>Me encanta esta red social, es muy interactiva.</p><span class="like-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg> <span class="like-count">0</span></span></div><div class="card"><h3>Comentario 2</h3><p>¿Alguien más ama el diseño retro?</p><span class="like-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg> <span class="like-count">0</span></span></div><div class="card"><h3>Comentario 3</h3><p>¡Espero que agreguen más funciones pronto!</p><span class="like-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg> <span class="like-count">0</span></span></div></div><script src="js/script.js"></script></body></html>
+    <a href="index.html">Inicio</a>
+    <a href="social_media.html">Social Media</a>
+    <a href="social_comentario.html">Comentarios</a>
+    <a href="social_noticias.html">Noticias</a>
+</nav>
+
+<div class="contenedor">
+    <h2>Secciones de comentarios</h2>
+
+    <!-- COMENTARIO 1 -->
+    <p>Comentario 1... Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <div class="like-btn" data-id="comentario-1">
+        <svg viewBox="0 0 24 24">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 
+            c0-2.5 2-4.5 4.5-4.5c1.74 0 3.41 1.01 4.07 2.36h1.87
+            C14.09 5.01 15.76 4 17.5 4C20 4 22 6 22 8.5
+            c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+        </svg>
+        <span class="like-count">0</span>
+    </div>
+
+    <!-- COMENTARIO 2 -->
+    <p>Comentario 2... Integer posuere erat a ante venenatis dapibus.</p>
+    <div class="like-btn" data-id="comentario-2">
+        <svg viewBox="0 0 24 24">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 
+            c0-2.5 2-4.5 4.5-4.5c1.74 0 3.41 1.01 4.07 2.36h1.87
+            C14.09 5.01 15.76 4 17.5 4C20 4 22 6 22 8.5
+            c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+        </svg>
+        <span class="like-count">0</span>
+    </div>
+
+    <!-- COMENTARIO 3 -->
+    <p>Comentario 3... Sed posuere consectetur est at lobortis.</p>
+    <div class="like-btn" data-id="comentario-3">
+        <svg viewBox="0 0 24 24">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 
+            c0-2.5 2-4.5 4.5-4.5c1.74 0 3.41 1.01 4.07 2.36h1.87
+            C14.09 5.01 15.76 4 17.5 4C20 4 22 6 22 8.5
+            c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+        </svg>
+        <span class="like-count">0</span>
+    </div>
+
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
