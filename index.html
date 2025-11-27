@@ -3,8 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto Like - Inicio</title>
+    <title>ArdoBook - Inicio</title>
     <link rel="stylesheet" href="css/estilos.css">
+    <style>
+        /* Flotador en esquina inferior derecha */
+        #floter {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: rgba(0,0,0,0.7);
+            color: #fff;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-family: "Inter", sans-serif;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+            z-index: 9999;
+        }
+    </style>
 </head>
 <body>
 
@@ -33,6 +49,27 @@
     <a class="btn-principal" href="social_noticias.html">Ir a Noticias</a>
 </div>
 
+<!-- Flotador -->
+<div id="floter"></div>
+
 <script src="js/script.js"></script>
+<script>
+    // Nombre y apellido
+    const nombre = "Eduardo";
+    const apellido = "Aranda";
+
+    const floter = document.getElementById('floter');
+
+    function actualizarFecha() {
+        const fecha = new Date();
+        const opciones = { year: 'numeric', month: 'long', day: 'numeric' };
+        const fechaFormateada = fecha.toLocaleDateString('es-ES', opciones);
+
+        floter.textContent = `${nombre} ${apellido} - ${fechaFormateada}`;
+    }
+
+    // Ejecutar al cargar
+    actualizarFecha();
+</script>
 </body>
 </html>

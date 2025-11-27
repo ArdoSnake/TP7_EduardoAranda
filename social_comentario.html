@@ -5,6 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comentarios</title>
     <link rel="stylesheet" href="css/estilos.css">
+    <style>
+        /* Flotador en esquina inferior derecha */
+        #floter {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: rgba(0,0,0,0.7);
+            color: #fff;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-family: "Inter", sans-serif;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+            z-index: 9999;
+        }
+    </style>
 </head>
 <body>
 
@@ -23,46 +39,77 @@
 </nav>
 
 <div class="contenedor">
-    <h2>Secciones de comentarios</h2>
+    <h2>Comentarios estilo Facebook</h2>
 
     <!-- COMENTARIO 1 -->
-    <p>Comentario 1... Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    <div class="like-btn" data-id="comentario-1">
-        <svg viewBox="0 0 24 24">
-            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 
-            c0-2.5 2-4.5 4.5-4.5c1.74 0 3.41 1.01 4.07 2.36h1.87
-            C14.09 5.01 15.76 4 17.5 4C20 4 22 6 22 8.5
-            c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-        </svg>
-        <span class="like-count">0</span>
+    <div class="comentario">
+        <img class="perfil" src="imagen/imagen2.jpg" alt="Perfil">
+
+        <div class="contenido">
+            <span class="nombre">Juan Pérez</span>
+            <p class="burbuja">Este es un comentario de ejemplo muy similar a los de Facebook.</p>
+            <div class="acciones">
+                <span class="hora">Hace 2 horas</span>
+
+                <div class="like-btn" data-id="com1">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 
+                        c0-2.5 2-4.5 4.5-4.5c1.74 0 3.41 1.01 4.07 2.36h1.87
+                        C14.09 5.01 15.76 4 17.5 4C20 4 22 6 22 8.5
+                        c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                    </svg>
+                    <span class="like-count">0</span>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- COMENTARIO 2 -->
-    <p>Comentario 2... Integer posuere erat a ante venenatis dapibus.</p>
-    <div class="like-btn" data-id="comentario-2">
-        <svg viewBox="0 0 24 24">
-            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 
-            c0-2.5 2-4.5 4.5-4.5c1.74 0 3.41 1.01 4.07 2.36h1.87
-            C14.09 5.01 15.76 4 17.5 4C20 4 22 6 22 8.5
-            c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-        </svg>
-        <span class="like-count">0</span>
-    </div>
+    <div class="comentario">
+        <img class="perfil" src="imagen/imagen1.jpg" alt="Perfil">
 
-    <!-- COMENTARIO 3 -->
-    <p>Comentario 3... Sed posuere consectetur est at lobortis.</p>
-    <div class="like-btn" data-id="comentario-3">
-        <svg viewBox="0 0 24 24">
-            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 
-            c0-2.5 2-4.5 4.5-4.5c1.74 0 3.41 1.01 4.07 2.36h1.87
-            C14.09 5.01 15.76 4 17.5 4C20 4 22 6 22 8.5
-            c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-        </svg>
-        <span class="like-count">0</span>
+        <div class="contenido">
+            <span class="nombre">Jose Serpiente</span>
+            <p class="burbuja">¡Este diseño está muy bueno! Me gusta mucho cómo queda.</p>
+            <div class="acciones">
+                <span class="hora">Hace 30 min</span>
+
+                <div class="like-btn" data-id="com2">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 
+                        c0-2.5 2-4.5 4.5-4.5c1.74 0 3.41 1.01 4.07 2.36h1.87
+                        C14.09 5.01 15.76 4 17.5 4C20 4 22 6 22 8.5
+                        c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                    </svg>
+                    <span class="like-count">0</span>
+                </div>
+            </div>
+        </div>
     </div>
 
 </div>
 
+<!-- Flotador -->
+<div id="floter"></div>
+
 <script src="js/script.js"></script>
+<script>
+    // Nombre y apellido
+    const nombre = "Eduardo";
+    const apellido = "Aranda";
+
+    const floter = document.getElementById('floter');
+
+    function actualizarFecha() {
+        const fecha = new Date();
+        const opciones = { year: 'numeric', month: 'long', day: 'numeric' };
+        const fechaFormateada = fecha.toLocaleDateString('es-ES', opciones);
+
+        floter.textContent = `${nombre} ${apellido} - ${fechaFormateada}`;
+    }
+
+    // Ejecutar al cargar
+    actualizarFecha();
+</script>
 </body>
 </html>

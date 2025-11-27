@@ -5,19 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Noticias</title>
     <link rel="stylesheet" href="css/estilos.css">
+    <style>
+        /* Flotador en esquina inferior derecha */
+        #floter {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: rgba(0,0,0,0.7);
+            color: #fff;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-family: "Inter", sans-serif;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+            z-index: 9999;
+        }
+    </style>
 </head>
 <body>
 
 <header>
     <h1>Noticias</h1>
 
-    <!-- Ícono menú hamburguesa -->
+    <!-- Botón menú -->
     <svg id="btn-menu" xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24">
         <path d="M3 6h18M3 12h18M3 18h18" stroke="white" stroke-width="2" stroke-linecap="round"/>
     </svg>
 </header>
 
-<!-- NAV -->
 <nav>
     <a href="index.html">Inicio</a>
     <a href="social_media.html">Social Media</a>
@@ -31,60 +46,80 @@
     <!-- NOTICIA 1 -->
     <div class="tarjeta">
         <h3>Noticia 1</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse commodo ligula a magna porta.</p>
-
-        <button class="btn-like" data-id="likeN1">
-            <!-- Ícono SVG Like -->
-            <svg class="icon-like" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <p>
+            Traslado de vacaciones de invierno por Mundial: ¿y los colegios privados?.
+        </p>
+        <div class="like-btn" data-id="noticia-1">
+            <svg viewBox="0 0 24 24">
                 <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 
-                         2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09 
-                         C13.09 3.81 14.76 3 16.5 3 
-                         19.58 3 22 5.42 22 8.5c0 3.78-3.4 
-                         6.86-8.55 11.54L12 21.35z"
-                      fill="none" stroke="red" stroke-width="2"/>
+                c0-2.5 2-4.5 4.5-4.5c1.74 0 3.41 1.01 4.07 2.36h1.87
+                C14.09 5.01 15.76 4 17.5 4C20 4 22 6 22 8.5
+                c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
             </svg>
-            <span id="likeN1">0</span> Likes
-        </button>
+            <span class="like-count">0</span>
+        </div>
+        <a href="https://www.abc.com.py/nacionales/2025/11/26/traslado-de-vacaciones-de-invierno-por-mundial-y-los-colegios-privados/" target="_blank" class="btn-noticia">Leer más</a>
     </div>
 
     <!-- NOTICIA 2 -->
     <div class="tarjeta">
         <h3>Noticia 2</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id molestie tortor.</p>
-
-        <button class="btn-like" data-id="likeN2">
-            <svg class="icon-like" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <p>
+            ¡Se le trancó el anillo en el dedo! Así lo auxiliaron los bomberos.
+        </p>
+        <div class="like-btn" data-id="noticia-2">
+            <svg viewBox="0 0 24 24">
                 <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 
-                         2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09 
-                         C13.09 3.81 14.76 3 16.5 3 
-                         19.58 3 22 5.42 22 8.5c0 3.78-3.4 
-                         6.86-8.55 11.54L12 21.35z"
-                      fill="none" stroke="red" stroke-width="2"/>
+                c0-2.5 2-4.5 4.5-4.5c1.74 0 3.41 1.01 4.07 2.36h1.87
+                C14.09 5.01 15.76 4 17.5 4C20 4 22 6 22 8.5
+                c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
             </svg>
-            <span id="likeN2">0</span> Likes
-        </button>
+            <span class="like-count">0</span>
+        </div>
+        <a href="https://www.abc.com.py/nacionales/2025/11/26/se-le-tranco-el-anillo-en-el-dedo-asi-lo-auxiliaron-los-bomberos/" target="_blank" class="btn-noticia">Leer más</a>
     </div>
 
     <!-- NOTICIA 3 -->
     <div class="tarjeta">
         <h3>Noticia 3</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel hendrerit dui.</p>
-
-        <button class="btn-like" data-id="likeN3">
-            <svg class="icon-like" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <p>
+            Olimpia cierra un año para el olvido en la despedida de su leyenda viviente.
+        </p>
+        <div class="like-btn" data-id="noticia-3">
+            <svg viewBox="0 0 24 24">
                 <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 
-                         2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09 
-                         C13.09 3.81 14.76 3 16.5 3 
-                         19.58 3 22 5.42 22 8.5c0 3.78-3.4 
-                         6.86-8.55 11.54L12 21.35z"
-                      fill="none" stroke="red" stroke-width="2"/>
+                c0-2.5 2-4.5 4.5-4.5c1.74 0 3.41 1.01 4.07 2.36h1.87
+                C14.09 5.01 15.76 4 17.5 4C20 4 22 6 22 8.5
+                c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
             </svg>
-            <span id="likeN3">0</span> Likes
-        </button>
+            <span class="like-count">0</span>
+        </div>
+        <a href="https://www.abc.com.py/deportes/futbol/2025/11/26/olimpia-cierra-un-ano-para-el-olvido-en-la-despedida-de-su-leyenda-viviente/" target="_blank" class="btn-noticia">Leer más</a>
     </div>
 
 </div>
 
+<!-- Flotador -->
+<div id="floter"></div>
+
 <script src="js/script.js"></script>
+<script>
+    // Nombre y apellido
+    const nombre = "Eduardo";
+    const apellido = "Aranda";
+
+    const floter = document.getElementById('floter');
+
+    function actualizarFecha() {
+        const fecha = new Date();
+        const opciones = { year: 'numeric', month: 'long', day: 'numeric' };
+        const fechaFormateada = fecha.toLocaleDateString('es-ES', opciones);
+
+        floter.textContent = `${nombre} ${apellido} - ${fechaFormateada}`;
+    }
+
+    // Ejecutar al cargar
+    actualizarFecha();
+</script>
 </body>
 </html>
